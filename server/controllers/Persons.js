@@ -1,9 +1,12 @@
-var _      = require( 'underscore' );
+var _         = require( 'underscore' );
 var Person = require( '../models/Person' );
-var Bookshelf = require( 'bookshelf' );
-
 module.exports = {
 	'index' : function ( req, res, next ) {
-		res.send( { 'message' : Bookshelf.Instance.toString() } );
+		var person = new Person()
+			.fetch()
+			.then( function( collection ) {
+				res.send( { 'message' : collection.get( 'firstname' ) } );
+			} );
+
 	}
 };

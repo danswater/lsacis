@@ -8,8 +8,8 @@ var settings = {
 		'connection' : {
 			'host'     : '127.0.0.1',
 			'user'     : 'root',
-			'password' : '',
-			'database' : 'lsacis',
+			'password' : 'nets2218793',
+			'database' : 'lscis',
 			'charset'  : 'UTF8_GENERAL_CI'
 		}
 	}
