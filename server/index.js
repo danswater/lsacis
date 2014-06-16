@@ -9,6 +9,7 @@ module.exports.start = function ( done ) {
 	'use strict';
 
 	var app = express();
+	
 	environment( app );
 	routes( app );
 

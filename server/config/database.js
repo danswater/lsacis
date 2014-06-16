@@ -3,9 +3,10 @@ var settings    = require( './settings' );
 
 var Instance = null;
 
-module.exports = function() {
-	if( !Instance ) {
-		Instance = Bookshelf.initialize( settings.database );
-	}
-	return Instance;
+if( !Instance ) {
+	Instance = Bookshelf.initialize( settings.database );
 }
+
+module.exports = {
+	'Instance' : Instance
+};
